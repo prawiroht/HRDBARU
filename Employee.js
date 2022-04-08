@@ -42,8 +42,8 @@ function findAll(){
                         <td>${element.commission}</td>
                         <td>${element.managerLastName}</td>
                         <td>${element.departmentName}</td>
-                        <td><a href="update.html?id=${element.employeeId}"><button>Edit</button></a></td>
-                        <td><button onclick="deleteData(${element.employeeId})">Delete</button></td>
+                        <td><a href="update.html?id=${element.employeeId}"><button class="btn btn-dark">Edit</button></a></td>
+                        <td><button class="btn btn-dark" onclick="deleteData(${element.employeeId})">Delete</button></td>
                     </tr>`;
             }
             document.getElementById("findAll").innerHTML = "Done";
@@ -157,8 +157,8 @@ function searchEmployee() {
     }
     else{
         searchBox.innerHTML += `
-        <div class="column5" style="padding:15px"><input type="text" name="keywords" id="keywords" placeholder="Nama pegawai"></div>
-        <div class="column3" style="padding:15px"><button class="btn btn-dark"onclick="searchByFirstName(0,8)">START</button></div> 
+        <div class="column5" style="padding:15px 0px"><input type="text" name="keywords" id="keywords" placeholder="Nama pegawai"></div>
+        <div class="column3" style="padding:16px"><button class="btn btn-dark"onclick="searchByFirstName(0,8)">START</button></div> 
     `
     }  
 }

@@ -14,7 +14,8 @@ function getById(id){
         document.getElementById("lastName").value = data.lastName;
         document.getElementById("email").value = data.email;
         document.getElementById("phoneNumber").value = data.phoneNumber;
-        document.getElementById("hireDate").value = data.hireDate;
+        var tanggal = new Date(data.hireDate).toISOString().slice(0, 10);
+        document.getElementById("hireDate").value = tanggal;
         document.getElementById("jobs").value = data.jobId;
         document.getElementById("salary").value = data.salary;
         document.getElementById("commission").value = data.commission;
@@ -22,3 +23,7 @@ function getById(id){
     xhr.open("GET", url+params, false);
     xhr.send();
 }
+
+// function formatDate(params) {
+//     return [params.getMonth()+1,params.getDate(),params.getFullYear()].join("/")
+// }

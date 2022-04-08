@@ -62,6 +62,11 @@ function clearData(value){
 }
 
 function updateData(){
+    var konfirmasi = confirm("Anda yakin ingin mengubah data ini?");
+    if(!konfirmasi){
+        console.log("Tidak jadi update.");
+        return false;
+    }
     url = "http://127.0.0.1:9090/employees/"
     var data = JSON.stringify({
         employeeId : new URL(window.location).searchParams.get("id"),

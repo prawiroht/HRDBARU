@@ -1,0 +1,7 @@
+desc EMPLOYEES;
+
+select * from USER_SEQUENCES;
+
+SELECT * FROM JOBS;
+
+select EMPLOYEES_SEQ.NEXTVAL from dual;
